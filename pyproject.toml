@@ -5,7 +5,10 @@ description = "Play Go Fish against LLM agents."
 authors = [{ name = "Paul Harrison", email = "paul@harrison.sh" }]
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
-dependencies = []
+dependencies = [
+    "pydantic>=2.10.6",
+    "pydantic-settings[dotenv]>=2.7.1",
+]
 
 [project.scripts]
 go-fish = "go_fish:main"
@@ -13,3 +16,8 @@ go-fish = "go_fish:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+test = [
+    "pytest>=8.3.4",
+]
