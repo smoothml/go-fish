@@ -6,6 +6,7 @@ authors = [{ name = "Paul Harrison", email = "paul@harrison.sh" }]
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
+    "loguru>=0.7.3",
     "pydantic>=2.10.6",
     "pydantic-settings[dotenv]>=2.7.1",
 ]

@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from pydantic import HttpUrl, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -9,6 +11,7 @@ class Settings(BaseSettings):
     base_url: HttpUrl = Field(..., alias="OPENAI_BASE_URL")
     temperature: float = 0.9
     num_agents: int = 3
+    log_file: Path | None = None
 
     model_config = SettingsConfigDict(frozen=True)
 
