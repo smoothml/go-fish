@@ -1,0 +1,15 @@
+[project]
+name = "go-fish"
+version = "0.1.0"
+description = "Play Go Fish against LLM agents."
+authors = [{ name = "Paul Harrison", email = "paul@harrison.sh" }]
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[project.scripts]
+go-fish = "go_fish:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
