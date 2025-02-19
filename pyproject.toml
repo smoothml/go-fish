@@ -7,8 +7,9 @@ readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "loguru>=0.7.3",
+    "openai>=1.63.2",
     "pydantic>=2.10.6",
-    "pydantic-settings[dotenv]>=2.7.1",
+    "pydantic-settings>=2.7.1",
 ]
 
 [project.scripts]
@@ -21,4 +22,9 @@ build-backend = "hatchling.build"
 [dependency-groups]
 test = [
     "pytest>=8.3.4",
+    "pytest-env>=1.1.5",
 ]
+
+[tool.pytest_env]
+OPENAI_API_KEY = "test-key"
+OPENAI_BASE_URL = "https://localhost:8080"

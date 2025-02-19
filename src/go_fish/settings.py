@@ -15,4 +15,7 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(frozen=True)
 
-settings = Settings()
+
+
+def get_settings() -> Settings:
+    return Settings()
